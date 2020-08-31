@@ -1,0 +1,13 @@
+D:\c#\projects\nodepad\nodepad\bin\Debug\nodepad.exe.config
+D:\c#\projects\nodepad\nodepad\bin\Debug\nodepad.exe
+D:\c#\projects\nodepad\nodepad\bin\Debug\nodepad.pdb
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.csprojAssemblyReference.cache
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.Form1.resources
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.Properties.Resources.resources
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.csproj.GenerateResource.cache
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.csproj.CoreCompileInputs.cache
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.exe
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.pdb
+D:\c#\projects\nodepad\nodepad\bin\Debug\FileOperationLogic.dll
+D:\c#\projects\nodepad\nodepad\bin\Debug\FileOperationLogic.pdb
+D:\c#\projects\nodepad\nodepad\obj\Debug\nodepad.csproj.CopyComplete

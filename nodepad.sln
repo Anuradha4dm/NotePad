@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nodepad", "nodepad\nodepad.csproj", "{F999FD96-C072-465D-9877-5882E826CDF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperationLogic", "FileOperationLogic\FileOperationLogic.csproj", "{E4D50282-0157-4D27-8EEC-5CBA8425EC30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F999FD96-C072-465D-9877-5882E826CDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F999FD96-C072-465D-9877-5882E826CDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F999FD96-C072-465D-9877-5882E826CDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F999FD96-C072-465D-9877-5882E826CDF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D50282-0157-4D27-8EEC-5CBA8425EC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D50282-0157-4D27-8EEC-5CBA8425EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D50282-0157-4D27-8EEC-5CBA8425EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D50282-0157-4D27-8EEC-5CBA8425EC30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8134733-0308-4B35-8AB3-FFF4DD662017}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+D:\c#\projects\nodepad\FileOperationLogic\bin\Debug\FileOperationLogic.dll
+D:\c#\projects\nodepad\FileOperationLogic\bin\Debug\FileOperationLogic.pdb
+D:\c#\projects\nodepad\FileOperationLogic\obj\Debug\FileOperationLogic.csprojAssemblyReference.cache
+D:\c#\projects\nodepad\FileOperationLogic\obj\Debug\FileOperationLogic.csproj.CoreCompileInputs.cache
+D:\c#\projects\nodepad\FileOperationLogic\obj\Debug\FileOperationLogic.dll
+D:\c#\projects\nodepad\FileOperationLogic\obj\Debug\FileOperationLogic.pdb
