@@ -17,12 +17,29 @@ namespace nodepad
     public partial class Form1 : Form
     {
         FileOperation fileOperation;
+        EditOperation editOperation;
+        Timer timer;
         public Form1()
         {
             InitializeComponent();
             fileOperation = new FileOperation();
+            editOperation = new EditOperation();
+            timer = new Timer();
+            timer.Tick += undoItem_ticks;
+            timer.Interval = 500;
+
+
             fileOperation.InitializeFile();
             fileViewUpdate();
+        }
+
+
+        public void undoItem_ticks(object sender,EventArgs e)
+        {
+            timer.Stop();
+            editOperation.addItemToStack(richTextBox.Text);
+            fileViewUpdate();
+
         }
 
         private void cutItem_Click(object sender, EventArgs e)
@@ -36,8 +53,14 @@ namespace nodepad
 
         private void pasteItem_Click(object sender, EventArgs e)
         {
-            int position = richTextBox.SelectionStart;
-            richTextBox.Text = richTextBox.Text.Insert(position, Clipboard.GetText());
+            if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text))
+            {
+                pasteItem.Enabled = true;
+                int position = richTextBox.SelectionStart;
+                richTextBox.Text = richTextBox.Text.Insert(position, Clipboard.GetText());
+
+            }
+
         }
 
         private void copyItem_Click(object sender, EventArgs e)
@@ -68,17 +91,24 @@ namespace nodepad
         private void fileViewUpdate()
         {
             string filename;
-            
-            if (!fileOperation.IsSave)
+
+            undoItem.Enabled = editOperation.canUndo() ? true:false;
+
+           
+
+            if (!fileOperation.IsSave && !fileOperation.Filename.Contains("*"))
             {
                 fileOperation.Filename += "*";
-            }else
+            }
+            else if(fileOperation.IsSave)
             {
 
                 filename = fileOperation.Filename;
                 fileOperation.Filename = filename.Replace("*","");
                 
             }
+
+
                 this.Text = fileOperation.Filename;
         }
 
@@ -86,13 +116,13 @@ namespace nodepad
         {
             fileOperation.IsSave = false;
 
-            if (!fileOperation.Filename.Contains("*"))
+            if (editOperation.enableEditText)
             {
-                fileOperation.Filename += "*";
-                this.Text = fileOperation.Filename;
-
+                timer.Start();
             }
 
+           
+           
         }
 
         private void newItem_Click(object sender, EventArgs e)
@@ -198,6 +228,19 @@ namespace nodepad
                 MessageBox.Show("File is not save \n are you sure exis? ","notepad",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             }
             Application.Exit();
+        }
+
+        private void selectAllItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.SelectAll();
+        }
+
+        private void undoItem_Click(object sender, EventArgs e)
+        {
+
+            editOperation.enableEditText = false;
+            richTextBox.Text = editOperation.removeItemFromStack();
+            fileViewUpdate();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace FileOperationLogic
 
         public void InitializeFile()
         {
-            this.filename = "untitle.txt";
+            this.filename = "untitle.txt*";
             this.isSave = false;
         }
 
@@ -33,7 +33,7 @@ namespace FileOperationLogic
         }
 
         public void savefile(string filename)
-        {
+        { 
             FileLocation =filename;
             IsSave = true;
             setFileName(filename);

@@ -44,15 +44,15 @@
             this.copyItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.fIndToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectAllItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timedateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +148,7 @@
             this.replaceToolStripMenuItem,
             this.goToToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.selectAllToolStripMenuItem,
+            this.selectAllItem,
             this.timedateToolStripMenuItem});
             this.editItemMenu.Name = "editItemMenu";
             this.editItemMenu.Size = new System.Drawing.Size(39, 20);
@@ -157,11 +157,11 @@
             // 
             // undoItem
             // 
-            this.undoItem.Enabled = false;
             this.undoItem.Name = "undoItem";
             this.undoItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.undoItem.Size = new System.Drawing.Size(180, 22);
             this.undoItem.Text = "Undo";
+            this.undoItem.Click += new System.EventHandler(this.undoItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -203,19 +203,6 @@
             this.deleteItem.Text = "Delete";
             this.deleteItem.Click += new System.EventHandler(this.deleteItem_Click);
             // 
-            // richTextBox
-            // 
-            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(0, 24);
-            this.richTextBox.Margin = new System.Windows.Forms.Padding(10);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(800, 426);
-            this.richTextBox.TabIndex = 1;
-            this.richTextBox.Text = "";
-            this.richTextBox.TextChanged += new System.EventHandler(this.richTextBox_TextChanged);
-            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
@@ -251,11 +238,12 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
             // 
-            // selectAllToolStripMenuItem
+            // selectAllItem
             // 
-            this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.selectAllToolStripMenuItem.Text = "Select All";
+            this.selectAllItem.Name = "selectAllItem";
+            this.selectAllItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAllItem.Text = "Select All";
+            this.selectAllItem.Click += new System.EventHandler(this.selectAllItem_Click);
             // 
             // timedateToolStripMenuItem
             // 
@@ -263,10 +251,24 @@
             this.timedateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.timedateToolStripMenuItem.Text = "Time/date";
             // 
+            // richTextBox
+            // 
+            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(0, 24);
+            this.richTextBox.Margin = new System.Windows.Forms.Padding(10);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(800, 426);
+            this.richTextBox.TabIndex = 1;
+            this.richTextBox.Text = "";
+            this.richTextBox.TextChanged += new System.EventHandler(this.richTextBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox);
@@ -306,7 +308,7 @@
         private System.Windows.Forms.ToolStripMenuItem replaceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goToToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectAllItem;
         private System.Windows.Forms.ToolStripMenuItem timedateToolStripMenuItem;
     }
 }
